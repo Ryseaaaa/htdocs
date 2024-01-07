@@ -54,7 +54,7 @@
 
     //4
     echo "<br>";
-    echo "<h1>color rings</h1>";
+    echo "<h1>images, xmas edition</h1>";
 
     for ($i = 0; $i < 10; $i++) {
         if (fmod($i,2) == 1){
@@ -63,5 +63,65 @@
             $color = "red";
         }
 
-        echo "<img src=\"img/".$fileData[$i]."\" style=\"border-style=solid; border-color=".$color.";\">";
+        echo "<img src=\"img/".$fileData[$i]."\" style=\"border-style: solid; border-color: ".$color.";\">";
     }
+
+    //4
+    echo "<br>";
+    echo "<h1>busreis</h1>";
+
+    function prijsberekening($leeftijd){
+        if($leeftijd < 3){
+            return 0;
+        }elseif($leeftijd > 65 || $leeftijd <= 12){
+            return 5;
+        }else{
+            return 10;
+        }
+    }
+
+    echo "<p>Leeftijd: 10 - Prijs: $".prijsberekening(10)."</p>";
+    echo "<p>Leeftijd: 2 - Prijs: $".prijsberekening(2)."</p>";
+    echo "<p>Leeftijd: 65 - Prijs: $".prijsberekening(65)."</p>";
+    echo "<p>Leeftijd: 12 - Prijs: $".prijsberekening(12)."</p>";
+
+    //4
+    echo "<br>";
+    echo "<h1>Zwemclubs</h1>";
+
+    echo "
+    <style>
+        .listelement {
+            display: inline-block;
+            width: 200px;
+        }
+
+        .img {
+            width: 20px;
+            padding-right: 2px;
+        }
+    </style>";
+
+    $zwemclub = array (
+        array("De Spartelkuikens", 25),
+        array("De Waterbuffels", 32),
+        array("Plonsmderin", 11),
+        array("Bommetje", 23)
+    ); 
+
+
+
+    foreach ($zwemclub as $club) {
+
+        echo "<div class=\"list\">";
+            echo "<div class=\"listelement\">".$club[0]."</div>";
+            echo "<div class=\"listelement\">".$club[1]."</div>";
+
+            for ($i = 1; $i <= ($club[1]/5); $i++){
+                echo "<img class=\"listelement, img\" src=\"img/bonsai.jpeg\" >";
+            }
+
+        echo "</div>";
+    
+    }
+
