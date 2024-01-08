@@ -85,7 +85,7 @@
     echo "<p>Leeftijd: 65 - Prijs: $".prijsberekening(65)."</p>";
     echo "<p>Leeftijd: 12 - Prijs: $".prijsberekening(12)."</p>";
 
-    //4
+    //5
     echo "<br>";
     echo "<h1>Zwemclubs</h1>";
 
@@ -125,3 +125,21 @@
     
     }
 
+    //6
+    echo "<br>";
+    echo "<h1>Kapperzaak Sanders</h1>";
+
+    $kappersagenda["9.15"] = "Mevr. Pietersen";
+    $kappersagenda["9.30"] = "Mevr. Willms";
+    $kappersagenda["9.45"] = "";
+    $kappersagenda["10.00"] = "Paul van den Broek";
+    $kappersagenda["10.15"] = "Karel de Meeuw";
+    $kappersagenda["10.30"] = "";
+
+    echo "De volgende momenten zijn nog beschikbaar:<ul>";
+        
+    foreach($kappersagenda as $tijd => $afspraak) {
+        if($afspraak == "") { 
+        print("<li>".$tijd."</li>") ;
+        }
+    }
