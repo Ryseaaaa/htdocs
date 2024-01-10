@@ -1,0 +1,10 @@
+.imageUnselected {
+    filter: contrast(0.5) brightness(0.5);
+}
+.imageSelected {
+    filter: contrast(1) brightness(1);
+}
+
+input {
+    /*display: none;*/
+}

@@ -17,8 +17,8 @@
     }
 
 foreach($fileData as $img){
-    
-    echo "<img class=\"image\" src=\"img/".$img."\">";
+    echo "<input type=\"checkbox\" id=\"select.".$img."\" name=\"select.".$img."\">   ";
+    echo "<img class=\"imageUnselected\" id=\"".$img."\"  for=\"".$img."\" onclick=\"selectImage('".$img."')\" value=\"\" src=\"img/".$img."\">";
 
 }
 ?>
