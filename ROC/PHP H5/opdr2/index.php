@@ -10,7 +10,7 @@
   <body>
     <form class="imagecontainer" action="resultaat.php" method="POST">
       <?php include "imagecollect.php";?>
-      <input type="submit" name="submitbutton" value="Submit"/>
+      <input type="submit" class="submit" name="submitbutton" value="Submit"/>
     </form>
   </body>
 </html>
